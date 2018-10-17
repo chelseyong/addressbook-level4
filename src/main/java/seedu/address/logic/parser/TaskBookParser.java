@@ -57,8 +57,8 @@ public class TaskBookParser {
         Command commandToReturn = null;
         for (CommandParser command : commands) {
             if (command.getCommandWord().equals(commandWord)) {
-                 commandToReturn = command.parse(arguments);
-                 break;
+                commandToReturn = command.parse(arguments);
+                break;
             }
         }
         // JUNIT: test commandToReturn != null
