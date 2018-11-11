@@ -83,10 +83,13 @@ to complete this task, to the task book +
 Module code is an optional input. +
 ====
 
-[IMPORTANT]
+[CAUTION]
 ====
 Tasks with similar deadline, title and module code are considered duplicate.
 If duplicate task is added, Task Book will give an error message: `This task already exists in the task book`
+
+However, if the original task has no module code, you are allowed to add
+a similar task with a new module code.
 ====
 Format: `add t/TITLE d/DESCRIPTION p/PRIORITY h/HOURS [c/MODULE_CODE]`
 
