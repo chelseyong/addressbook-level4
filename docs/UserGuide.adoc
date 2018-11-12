@@ -106,12 +106,11 @@ Complete a task in the task book by providing its index and the actual number of
 Format: `complete i/INDEX h/HOURS_TO_COMPLETE`
 [NOTE]
 ====
-You are not allowed to complete a task in `0` hours!
+You are not allowed to complete a task in less than 1 hour!
 ====
 
 [TIP]
-If it takes more than 1 day to complete the task, it is recommended to set milestones for the task.
-Refer to <<Adding a milestone: `add_milestone`>>
+If it takes more than 1 day to complete the task, it is recommended to set milestones for it.
 
 Examples:
 

@@ -355,7 +355,7 @@ In the Sequence Diagram, these are the interactions within the Logic component f
 image::EncryptionLogicSequenceDiagram.png[width="500"]
 
 ==== Design Considerations
-There are a few ways to implement the password encryption into our product. +
+There are a few ways to implement the password encryption for our product. +
 However, each method has its strengths and weaknesses. We will be explaining why we chose this particular implementation design.
 
 ===== Aspect: Online password authentication
@@ -363,7 +363,7 @@ However, each method has its strengths and weaknesses. We will be explaining why
 ** Pros: Simple and efficient method to log into Task Book with a lower risk of data breach
 *** If student has set a complex password, it will be harder to hack into Task Book
 ** Cons: Possible data loss if student's password is forgotten
-* **Alternative 2:** Connect student logging session to an online authentication
+* **Alternative 2:** Connect student logging session to an online authentication system
 ** Pros: Allows students to reset their password, if forgotten
 ** Cons: Extra step to connect to the internet and send hashed password to verify with the database.
 Additional space is also required in database to store users and their passwords securely.
@@ -525,7 +525,7 @@ Use case resumes at step 2.
 *MSS*
 
 1.  Student selects the deadline for a task
-2.  TB updates the selected date.
+2.  TB updates the selected date
 3.  Student requests to add a new task with some details
 4.  TB checks for the validity of command and adds the task to the list
 +
@@ -534,12 +534,12 @@ Use case ends.
 *Extensions*
 
 * 3a. Student did not enter one or more compulsory input(s) for the task
-** 3a1. TB tells student that input(s) is/are empty.
+** 3a1. TB tells student that input(s) is/are empty
 +
 Use case ends.
 
 * 3b. Student enters a duplicated task
-** 3b1. TB shows that task is entered before.
+** 3b1. TB shows that task already exists in TB
 +
 Use case ends.
 //end::addTask[]
@@ -551,7 +551,7 @@ Use case ends.
 *MSS*
 
 1.  Student selects the date of completed task
-2.  TB updates the selected date.
+2.  TB updates the selected date
 3.  Student requests to complete the task
 4.  TB checks for its validity and completes the task in TB
 +
@@ -564,8 +564,8 @@ Use case ends.
 +
 Use case resumes at step 4.
 
-* 3a. Student wants to complete a completed task.
-** 3a1. TB gives an error to show that task is completed already.
+* 3a. Student wants to complete a completed task
+** 3a1. TB gives an error to show that task is completed already
 +
 Use case ends.
 //end::completeTask[]
@@ -747,10 +747,10 @@ _{ more test cases ... }_
 .. Select the date using the `select` command, or the date-picker in the UI.
 .. Test case: `select 11/11/2018` +
    Expected: Tasks with the similar deadline are listed. Timestamp in the status bar is updated.
-. Add a task with title, description, priority and expected number of hours filled.
+. Add a task with title, description, priority and expected number of hours entered.
 .. Test case: `add t/Do project portfolio d/convert to pdf format p/high h/3 c/CS2101` +
    Expected: A task will be added to the list, together with the other tasks with the same deadline.
-.. Other incorrect add commands: `add` or `add t/ d/ p/ h/` with compulsory fields not filled in
+.. Other incorrect add commands: `add` or `add t/ d/ p/ h/` with compulsory fields not entered
 or `add t/Do coding d/very fun p/midhigh h/1` with invalid priority level.
 
 
@@ -762,7 +762,7 @@ or `add t/Do coding d/very fun p/midhigh h/1` with invalid priority level.
 * Go to `data/taskbook.xml` and delete the file
 
 .. If the file is missing:
-* The filename may be incorrect, i.e. not `taskbook.xml`
-* `taskbook.xml` may not be in the `data` folder
+* The filename may be incorrect, i.e. not `taskbook.xml`, or
+* `taskbook.xml` may not be in the `/data` folder
 
 //end::appendix[]
