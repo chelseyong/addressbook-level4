@@ -12,24 +12,24 @@ user and developer documentation and respond to pull requests.
 
 == Overview
 
-Task Book is a desktop to-do list application. It is a GUI app but most of its user interactions happen in the Command Line Interface (CLI).
+`*_Task Book_*` is a desktop to-do list application. It is a GUI app but most of its user interactions happen in the Command Line Interface (CLI).
 It is targeted at *helping busy students manage their daily tasks*
 by keeping track of their to-do things, approaching deadlines and categorise them in an orderly manner.
-Furthermore, Task Book allows you to set milestones for big projects so that you can finish them manageably on time.
-If you can type fast, Task Book can manage your tasks faster than traditional paper notebooks or a mobile application.
+Furthermore, `*_Task Book_*` allows you to set milestones for big projects so that you can finish them manageably on time.
+If you can type fast, `*_Task Book_*` can manage your tasks faster than traditional paper notebooks or a mobile application.
 
 == Summary of contributions
 Here is an overview of what I have done to support my team in achieving the final goal of our project.
 
 * *Code contributions*: https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&search=chelseyong[tracked by Reposense]
-* *Main feature implemented*: Allows students *to add tasks into the task book*
+* *Main feature implemented*: Allows students *to add tasks into the* `*_Task Book_*`
 ** What it does: Adds a new task with its title, description, priority level and expected hours of completion
-** Justification: This is a core feature that serves the main purpose of task book and lays the foundation for other features to be built upon
+** Justification: This is a core feature that serves the main purpose of `*_Task Book_*` and lays the foundation for other features to be built upon
 ** Highlights: Written model stubs and applied equivalence partitioning for unit-testing the feature to ensure sufficient coverage for the feature
 
 * *Other minor enhancements*:
 
-** Feature that allows students to *complete existing tasks* in the task book
+** Feature that allows students to *complete existing tasks* in the `*_Task Book_*`
 *** What it does: Strikes off an incomplete task
 *** Justification: Another crucial feature that allows students to focus on incomplete tasks and also track productivity
 
@@ -62,7 +62,7 @@ to describe user stories of the product as well as to break down user stories in
 
 |===
 |_The following showcases my ability to write user documentation for add task, complete task,
-  and locking/unlocking the taskbook_
+  and locking/unlocking the_ `*_Task Book_*`
 |===
 
 include::../UserGuide.adoc[tag=add]
@@ -75,7 +75,7 @@ include::../UserGuide.adoc[tag=lockunlock]
 
 |===
 |_The following showcases my ability to write use cases for add task, complete task,
-developer documentation for locking taskbook, and the appendix._
+developer documentation for locking_ `*_Task Book_*`, _and the appendix._
 |===
 
 include::../DeveloperGuide.adoc[tag=addTask]

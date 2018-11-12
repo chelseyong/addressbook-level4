@@ -328,7 +328,7 @@ image::UndoRedoActivityDiagram.png[width="650"]
 // end::undoredo[]
 
 // tag::lockunlock[]
-=== Locking/Unlocking TaskBook feature [coming in v2.0]
+=== Locking/Unlocking Task Book feature [coming in v2.0]
 ==== Proposed Implementation
 To ensure encryption keys are both sufficiently random and hard to brute force,
 we will use standard password-based encryption (PBE) key derivation methods. +
@@ -341,17 +341,17 @@ Along with the password text provided by the student, a salt is appended to prod
 image::salt_hashing.png[width="500"]
 
 An AES or DES encryption key is thus derived from this process.
-To unlock the task book, the same salt is appended to the password provided to generate the decryption key.
+To unlock the Task Book, the same salt is appended to the password provided to generate the decryption key.
 
 
 In the Sequence Diagram, these are the interactions within the Logic component for the execute("lock") API call (Figure below):
 
 .  `Logic` parses the command and returns the LockCommand.
 .  During the command execution, `Model` checks whether a password has been set.
-.  If so, `Encryptor` will encrypt `taskbook.xml` file so the task book cannot be seen by anyone without the password.
+.  If so, `Encryptor` will encrypt `taskbook.xml` file so the Task Book cannot be seen by anyone without the password.
 .  Else, a `CommandException` is returned to prompt the user to set a password.
 
-.Sequence diagram of user locking taskbook
+.Sequence diagram of user locking Task Book
 image::EncryptionLogicSequenceDiagram.png[width="500"]
 
 ==== Design Considerations

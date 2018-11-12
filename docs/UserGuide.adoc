@@ -76,7 +76,7 @@ Examples:
 === Adding a task: `add`
 
 Adds a task with its title, description, priority level (low, medium, high) and the number of hours (positive integers only) expected
-to complete this task, to the task book +
+to complete this task, to the Task Book +
 
 [NOTE]
 ====
@@ -86,7 +86,7 @@ Module code is an optional input. +
 [CAUTION]
 ====
 Tasks with similar deadline, title and module code are considered duplicate.
-If duplicate task is added, Task Book will give an error message: `This task already exists in the task book`
+If a duplicate task is added, Task Book will give an error message: `This task already exists in the task book`
 
 However, if the original task has no module code, you are allowed to add
 a similar task with a new module code.
@@ -102,7 +102,7 @@ Examples:
 // tag::complete[]
 === Complete a task: `complete`
 
-Complete a task in the task book by providing its index and the actual number of hours taken to complete the task +
+Complete a task in the Task Book by providing its index and the actual number of hours taken to complete the task +
 Format: `complete i/INDEX h/HOURS_TO_COMPLETE`
 [NOTE]
 ====
@@ -305,7 +305,7 @@ Task Book will be password-protected to ward off intruders. +
 Format: `lock`
 
 === Unlock Task Book [coming in v2.0]
-Task Book can be unlocked so that authenticated students can log into the task book to access sensitive information. +
+Task Book can be unlocked so that authenticated students can log into the Task Book to access sensitive information. +
 Format: `unlock PASSWORD`
 // end::lockunlock[]
 
